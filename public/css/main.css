@@ -1,0 +1,14 @@
+html, body {
+    background: rgb(255, 255, 235);
+  }
+
+.custom-carousel {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 235);
+  }
+  
+h1 {
+    background: rgb(255, 255, 235);
+}
+  

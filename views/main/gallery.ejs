@@ -1,23 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Image Gallery</title>
+<%- include('../includes/head.ejs') %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+  <%- include('../includes/navigation.ejs') %>
   <h1>Image Gallery</h1>
   <% if (successMessage) { %>
-    <div class="alert alert-success" role="alert">
+    <div>
       <%= successMessage %>
     </div>
   <% } %>
-  <div id="imageCarousel" class="carousel slide" data-ride="carousel" style="max-width: 400px; margin: 0 auto;">
-    <div class="carousel-inner" style="max-height: 200px;">
+  <div id="imageCarousel" class="carousel slide custom-carousel" data-ride="carousel">
+        <div class="carousel-inner" style="max-height: 200px;">
       <% images.forEach(function(image, index) { %>
         <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
           <img src="/uploads/<%= image %>" alt="<%= image %>" class="d-block mx-auto img-fluid" style="max-height: 150px;">
@@ -35,5 +31,4 @@
   </div>
   <a href="/">Upload More Images</a>
 
-</body>
-</html>
+  <%- include('../includes/end.ejs') %>

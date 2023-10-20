@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <!-- ... (your existing meta tags and title) ... -->
+<%- include('../includes/head.ejs') %>
 </head>
 <body>
+  <%- include('../includes/navigation.ejs') %>
   <h1>Image Upload</h1>
   <form action="/upload" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
     <input type="file" name="image" accept="image/*" id="imageInput">
@@ -15,39 +13,4 @@
   <div id="imagePreview" style="display: none;">
     <img src="" alt="Selected Image" id="selectedImage">
   </div>
-
-  <script>
-    // JavaScript code for displaying the selected image and validating the form
-    const selectedImage = document.getElementById('selectedImage');
-    const imagePreview = document.getElementById('imagePreview');
-    const imageInput = document.getElementById('imageInput');
-    const errorMessage = document.getElementById('errorMessage');
-
-    imageInput.addEventListener('change', function (e) {
-      if (e.target.files.length > 0) {
-        const file = e.target.files[0];
-        const reader = new FileReader();
-
-        reader.onload = function (event) {
-          selectedImage.src = event.target.result;
-          imagePreview.style.display = 'block'; // Show the image preview
-        };
-
-        reader.readAsDataURL(file);
-      } else {
-        selectedImage.src = '';
-        imagePreview.style.display = 'none';
-      }
-    });
-
-    function validateForm() {
-      if (imageInput.files.length === 0) {
-        errorMessage.style.display = 'block';
-        return false; // Prevent form submission if no image is selected
-      }
-      errorMessage.style.display = 'none';
-      return true; // Allow form submission if an image is selected
-    }
-  </script>
-</body>
-</html>
+  <%- include('../includes/end.ejs') %>
