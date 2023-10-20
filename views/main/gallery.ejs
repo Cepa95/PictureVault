@@ -3,9 +3,19 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+   /* Increase specificity to override Bootstrap styles */
+#imageCarousel .carousel-control-prev-icon, 
+#imageCarousel .carousel-control-next-icon {
+  color: #FF0000; /* Set the desired color, e.g., red (#FF0000) */
+}
+
+  </style>
+
 </head>
 <body>
   <%- include('../includes/navigation.ejs') %>
+  <div class="color-class">
   <h1>Image Gallery</h1>
   <% if (successMessage) { %>
     <div>
@@ -16,19 +26,18 @@
         <div class="carousel-inner" style="max-height: 200px;">
       <% images.forEach(function(image, index) { %>
         <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
-          <img src="/uploads/<%= image %>" alt="<%= image %>" class="d-block mx-auto img-fluid" style="max-height: 150px;">
+          <img src="/uploads/<%= image %>" alt="<%= image %>" class="d-block mx-auto img-fluid" style="max-height: 250px;">
         </div>
       <% }); %>
     </div>
     <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" ariahidden="true"></span>
-      <span class="sr-only">Previous</span>
     </a>
     <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
+      <span class="carousel-control-next-icon " aria-hidden="true"></span>
     </a>
   </div>
   <a href="/">Upload More Images</a>
+</div>
 
   <%- include('../includes/end.ejs') %>

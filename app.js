@@ -10,9 +10,12 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname, 'public')));
 
 const mainRoutes = require('./routes/main');
+const errorController = require("./controllers/error");
 
 
 app.use('/', mainRoutes);
+
+app.use(errorController.get404);
 
 // Start the server
 const port = process.env.PORT || 3000;

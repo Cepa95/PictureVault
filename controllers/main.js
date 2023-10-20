@@ -28,7 +28,7 @@ exports.uploadImage = (req, res, next) => {
 
 
 exports.renderMainIndex = (req, res) => {
-    res.render('main/index');
+    res.render('main/index', {pageTitle: "Home page" });
   };
   
   exports.displayGallery = (req, res) => {
@@ -41,7 +41,7 @@ exports.renderMainIndex = (req, res) => {
   
       const successMessage = req.query.success === 'true' ? 'Image uploaded successfully' : '';
   
-      res.render('main/gallery', { images: files, successMessage });
+      res.render('main/gallery', { images: files, successMessage, pageTitle: "Gallery" });
     });
   };
   

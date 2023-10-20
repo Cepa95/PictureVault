@@ -15,7 +15,7 @@
     left: 100%;
     margin-left: -100px;
     height: 200%;
-    background: rgba(100,200,240,.9);  
+    background: #845EC2;  
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     -ms-transition: all ease .5s;
@@ -33,7 +33,7 @@
     transform: rotate(-45deg);
   }
   .menu-outer:hover {
-    background: rgba(100,200,240,.98);
+    background: #845EC2;
     left: 0;
     margin-left: 0;
     -webkit-transform: rotate(0deg);
@@ -108,6 +108,7 @@
   }
   nav li a:hover {
     color: rgba(250,130,70,1);
+    text-decoration: none;
   }
   @media screen and (max-width: 600px), screen and (max-height: 600px) {
     nav ul {font-size:.75em;}
