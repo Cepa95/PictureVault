@@ -24,13 +24,14 @@ exports.uploadImage = (req, res, next) => {
       return res.status(500).send("Error uploading the image");
     }
 
-    // After successful image upload
+    // After successful image upload, use res.redirect without the second argument
     res.redirect("/gallery?success=true");
   });
 };
 
+
 exports.renderMainIndex = (req, res) => {
-  res.render("main/index", { pageTitle: "index" });
+  res.render("main/index", { pageTitle: "index", path: "/" });
 };
 
 exports.displayGallery = (req, res) => {
@@ -48,11 +49,11 @@ exports.displayGallery = (req, res) => {
       images: files,
       successMessage,
       pageTitle: "Gallery",
+      path: "/gallery",
     });
   });
 };
 
 exports.displayHomePage = (req, res) => {
-  res.render("main/home-page", { pageTitle: "Home page" });
+  res.render("main/home-page", { pageTitle: "Home page", path: "/home" });
 };
-

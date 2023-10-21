@@ -111,6 +111,14 @@
     color: rgba(250,130,70,1);
     text-decoration: none;
   }
+  nav li a.active {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+  }
+  nav li a.active:hover {
+    color: rgba(250,130,70,1);;
+    text-decoration: none;
+  }
 
   @media screen and (max-width: 600px), screen and (max-height: 600px) {
     nav ul {font-size:.75em;}

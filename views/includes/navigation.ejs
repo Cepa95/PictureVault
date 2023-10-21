@@ -6,9 +6,9 @@
    </div>
    <nav>
        <ul>
-          <li><a href="/home">Home page</a></li>
-          <li><a href="/">Upload pictures</a></li>
-          <li><a href="/gallery">Gallery</a></li>
+          <li><a class="<%= path === '/home' ? 'active' : '' %>" href="/home">Home page</a></li>
+          <li><a class="<%= path === '/' ? 'active' : '' %>" href="/">Upload pictures</a></li>
+          <li><a class="<%= path === '/gallery' ? 'active' : '' %>" href="/gallery">Gallery</a></li>
           <li><a href="#">Admin</a></li> 
       </ul>
   </nav>
