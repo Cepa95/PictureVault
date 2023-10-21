@@ -9,6 +9,9 @@
   <%- include('../includes/navigation.ejs') %>
   <div class="color-class">
   <br>
+  <br>
+  <br>
+  <br>
   <h2 style="font-weight: bold;">Gallery</h2>
   <% if (successMessage) { %>
     <div>
@@ -16,20 +19,30 @@
     </div>
   <% } %>
   <br>
-  <div id="imageCarousel" class="carousel slide custom-carousel" data-ride="carousel">
-        <div class="carousel-inner" style="max-height: 200px;">
-      <% images.forEach(function(image, index) { %>
-        <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
-          <img src="/uploads/<%= image %>" alt="<%= image %>" class="d-block mx-auto img-fluid" style="max-height: 250px;">
-        </div>
-      <% }); %>
+  <div id="imageCarousel" class="carousel slide custom-carousel" data-ride="carousel" data-interval="false">
+    <div class="carousel-inner" style="max-height: 200px;">
+        <% images.forEach(function(image, index) { %>
+            <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+                <img src="/uploads/<%= image %>" alt="<%= image %>" class="d-block mx-auto img-fluid" style="max-height: 250px;">
+            </div>
+        <% }); %>
     </div>
-    <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+    <a id="carousel-control-prev" class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" ariahidden="true"></span>
-    </a>
-    <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon " aria-hidden="true"></span>
-    </a>
+  </a>
+  <a id="carousel-control-next" class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+  </a>
+</div>
+
+  <div class="image-counter">
+    <%= currentPage %>/<%= totalImages %>
   </div>
 </div>
-  <%- include('../includes/end.ejs') %>
+<script>
+  var totalImages = <%= totalImages %>;
+</script>
+<script src="/js/carousel.js"></script>
+</body>
+
+</html>

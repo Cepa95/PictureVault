@@ -28,6 +28,12 @@ h1, h2 {
   font-weight: bold; 
 }
 
+.image-counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .gif-container {
   display: flex;
   justify-content: center;

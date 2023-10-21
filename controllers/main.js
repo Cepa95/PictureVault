@@ -48,11 +48,14 @@ exports.displayGallery = (req, res) => {
     res.render("main/gallery", {
       images: files,
       successMessage,
+      currentPage: 1,
+      totalImages: files.length, // Total number of images
       pageTitle: "Gallery",
       path: "/gallery",
     });
   });
 };
+
 
 exports.displayHomePage = (req, res) => {
   res.render("main/home-page", { pageTitle: "Home page", path: "/home" });
