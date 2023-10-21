@@ -2,7 +2,9 @@
 </head>
 <body>
   <%- include('../includes/navigation.ejs') %>
+  <link rel="stylesheet" href="/css/button.css">
   <h1>Upload your pictures</h1>
+  <br>
   <br>
   <form action="/upload" method="POST" enctype="multipart/form-data" onsubmit="return validateForm()">
     <label for="imageInput"  class="border-box">
@@ -26,7 +28,4 @@
      </button>
   </form>
   <p id="errorMessage" style="color: red; display: none;">Please select an image to upload.</p>
-
   <%- include('../includes/end.ejs') %>
-</body>
-</html>

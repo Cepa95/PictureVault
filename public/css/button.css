@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: inherit;
+  font-family: 'Great Vibes', cursive;
   font-weight: 500;
   font-size: 17px;
   padding: 0.8em 1.5em 0.8em 1.2em;
@@ -53,7 +53,6 @@ svg {
   border: 3px solid #845ec2; 
 }
 
-/* Add CSS rules to center the label and button */
 form {
   display: flex;
   flex-direction: column;
@@ -64,14 +63,4 @@ form {
   text-align: center;
 }
 
-.border-box {
-  /* Your existing border-box styles */
-}
 
-.cssbuttons-io-button {
-  /* Your existing button styles */
-}
-
-input[type="file"] {
-  /* Your existing input[type="file"] styles */
-}

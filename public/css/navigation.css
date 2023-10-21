@@ -9,7 +9,7 @@
     overflow: hidden;
     position: fixed;
     top: 0;
-    font-family: 'Montserrat', serif;
+    font-family: 'Dynalight', cursive;
     z-index: 998;  
     width: 100%;
     left: 100%;
@@ -106,14 +106,17 @@
     -o-transition: all ease .5s;
     transition: all ease .5s;
   }
+
   nav li a:hover {
     color: rgba(250,130,70,1);
     text-decoration: none;
   }
+
   @media screen and (max-width: 600px), screen and (max-height: 600px) {
     nav ul {font-size:.75em;}
     nav ul a {padding: 10px;}
   }
+
   .menu-close {
     z-index: 9999;
     position: fixed;

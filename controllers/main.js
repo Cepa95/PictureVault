@@ -1,12 +1,15 @@
 const multer = require("multer");
 const path = require("path");
-const fs = require('fs');
+const fs = require("fs");
 
 // Set up multer for file uploads
 const storage = multer.diskStorage({
-  destination: './public/uploads/',
+  destination: "./public/uploads/",
   filename: function (req, file, cb) {
-    cb(null, file.fieldname + '-' + Date.now() + path.extname(file.originalname));
+    cb(
+      null,
+      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
+    );
   },
 });
 
@@ -22,26 +25,34 @@ exports.uploadImage = (req, res, next) => {
     }
 
     // After successful image upload
-    res.redirect('/gallery?success=true');
+    res.redirect("/gallery?success=true");
   });
 };
 
-
 exports.renderMainIndex = (req, res) => {
-    res.render('main/index', {pageTitle: "Home page" });
-  };
-  
-  exports.displayGallery = (req, res) => {
-    const uploadDirectory = path.join(__dirname, '../public/uploads'); 
-    fs.readdir(uploadDirectory, (err, files) => {
-      if (err) {
-        console.error(err);
-        return res.status(500).send('Error reading uploaded images');
-      }
-  
-      const successMessage = req.query.success === 'true' ? 'Image uploaded successfully' : '';
-  
-      res.render('main/gallery', { images: files, successMessage, pageTitle: "Gallery" });
+  res.render("main/index", { pageTitle: "index" });
+};
+
+exports.displayGallery = (req, res) => {
+  const uploadDirectory = path.join(__dirname, "../public/uploads");
+  fs.readdir(uploadDirectory, (err, files) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send("Error reading uploaded images");
+    }
+
+    const successMessage =
+      req.query.success === "true" ? "Image uploaded successfully" : "";
+
+    res.render("main/gallery", {
+      images: files,
+      successMessage,
+      pageTitle: "Gallery",
     });
-  };
-  
+  });
+};
+
+exports.displayHomePage = (req, res) => {
+  res.render("main/home-page", { pageTitle: "Home page" });
+};
+

@@ -12,5 +12,7 @@ router.get('/', mainController.renderMainIndex);
 
 router.get('/gallery', mainController.displayGallery);
 
+router.get('/home', mainController.displayHomePage);
+
 
 module.exports = router;

@@ -8,12 +8,14 @@
 <body>
   <%- include('../includes/navigation.ejs') %>
   <div class="color-class">
-  <h1>Image Gallery</h1>
+  <br>
+  <h2 style="font-weight: bold;">Gallery</h2>
   <% if (successMessage) { %>
     <div>
       <%= successMessage %>
     </div>
   <% } %>
+  <br>
   <div id="imageCarousel" class="carousel slide custom-carousel" data-ride="carousel">
         <div class="carousel-inner" style="max-height: 200px;">
       <% images.forEach(function(image, index) { %>
@@ -29,7 +31,5 @@
       <span class="carousel-control-next-icon " aria-hidden="true"></span>
     </a>
   </div>
-  <a href="/">Upload More Images</a>
 </div>
-
   <%- include('../includes/end.ejs') %>

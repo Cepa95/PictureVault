@@ -1,16 +1,18 @@
-html, body {
-    background: #ebd7d2;
-  }
+html,
+body {
+  background: #ebd7d2;
+}
 
 .custom-carousel {
-    max-width: 600px;
-    margin: 0 auto;
-    background: #ebd7d2;
-    
-  }
+  max-width: 600px;
+  margin: 0 auto;
+  background: #ebd7d2;
+}
 
 .color-class {
-    background: #ebd7d2;
+  background: #ebd7d2;
+  font-family: "Great Vibes", cursive;
+  font-size: x-large;
 }
 
 img {
@@ -18,10 +20,24 @@ img {
   max-width: 240px;
 }
 
+h1, h2 {
+  font-family: "Great Vibes", cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold; 
+}
+
+.gif-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  font-family: "Great Vibes", cursive;
+  font-size: larger;
+}
 
 
 
-
-  
-
-  
