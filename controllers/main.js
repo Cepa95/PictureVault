@@ -1,19 +1,8 @@
-const multer = require("multer");
 const path = require("path");
 const fs = require("fs");
 
-// Set up multer for file uploads
-const storage = multer.diskStorage({
-  destination: "./public/uploads/",
-  filename: function (req, file, cb) {
-    cb(
-      null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    );
-  },
-});
+const upload = require("../models/upload");
 
-const upload = multer({ storage });
 
 // Define a route for uploading pictures (move this logic to the controller)
 exports.uploadImage = (req, res, next) => {
