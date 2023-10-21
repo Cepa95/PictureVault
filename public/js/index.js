@@ -4,6 +4,7 @@ const imageInput = document.getElementById('imageInput');
 const errorMessage = document.getElementById('errorMessage');
 
 imageInput.addEventListener('change', function (e) {
+  errorMessage.style.display = 'none';
   if (e.target.files.length > 0) {
     const file = e.target.files[0];
     const reader = new FileReader();
