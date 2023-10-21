@@ -1,17 +1,24 @@
 html, body {
-    background: #f7ddd4;
+    background: #ebd7d2;
   }
 
 .custom-carousel {
     max-width: 600px;
     margin: 0 auto;
-    background: #f7ddd4;
+    background: #ebd7d2;
     
   }
 
 .color-class {
-    background: #f7ddd4;
+    background: #ebd7d2;
 }
+
+img {
+  max-height: 320px;
+  max-width: 240px;
+}
+
+
 
 
 

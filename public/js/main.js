@@ -29,3 +29,4 @@
    errorMessage.style.display = 'none';
    return true; // Allow form submission if an image is selected
  }
+
