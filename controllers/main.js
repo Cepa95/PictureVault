@@ -47,5 +47,6 @@ exports.displayGallery = (req, res) => {
 
 
 exports.displayHomePage = (req, res) => {
-  res.render("main/home-page", { pageTitle: "Home page", path: "/home" });
+  const gifPath = '/animations/ring.gif';
+  res.render("main/home-page", { pageTitle: "Home page", path: "/home", gifUrl: gifPath });
 };
