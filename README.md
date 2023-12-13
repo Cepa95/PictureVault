@@ -16,4 +16,5 @@ Functionalities:
 ![nav](https://github.com/Cepa95/PictureVault/assets/124800316/f0234e6b-5c8e-4a71-894c-d69b997a2e21)
 ![upload](https://github.com/Cepa95/PictureVault/assets/124800316/194cf558-f7f7-406b-9e6f-3e9db4195c62)
 ![nature](https://github.com/Cepa95/PictureVault/assets/124800316/f81a16d7-059e-47dd-bd40-8ba3e690330f)
-![gallery](https://github.com/Cepa95/PictureVault/assets/124800316/f588add4-b84c-4124-bfee-9d35528d40b5)
+![gallery](https://github.com/Cepa95/PictureVault/assets/124800316/6cf4d671-e415-429d-89ea-44112a2799a2)
+
