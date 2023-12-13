@@ -10,9 +10,10 @@ Gallery:
 
 The second page features a carousel of the uploaded pictures. This creates a dynamic and engaging way for users to view their collection.
 Navigation controls, such as arrow buttons or swipe gestures, enable users to move through the carousel and view each picture individually.
+User can also download the gallery.
 
 Functionalities:  
 ![nav](https://github.com/Cepa95/PictureVault/assets/124800316/f0234e6b-5c8e-4a71-894c-d69b997a2e21)
 ![upload](https://github.com/Cepa95/PictureVault/assets/124800316/194cf558-f7f7-406b-9e6f-3e9db4195c62)
 ![nature](https://github.com/Cepa95/PictureVault/assets/124800316/f81a16d7-059e-47dd-bd40-8ba3e690330f)
-![gallery](https://github.com/Cepa95/PictureVault/assets/124800316/92d4e794-1760-4f43-aec3-889d12140c3a)
+![gallery](https://github.com/Cepa95/PictureVault/assets/124800316/f588add4-b84c-4124-bfee-9d35528d40b5)
