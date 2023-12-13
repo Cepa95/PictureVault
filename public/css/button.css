@@ -16,51 +16,36 @@
   border: none;
   box-shadow: 0 0.7em 1.5em -0.5em #845ec2;
   letter-spacing: 0.05em;
-  border-radius: 20em;
-}
+  border-radius: 20em;}
 
 .cssbuttons-io-button svg {
   margin-right: 8px;
   width: 1.25rem;
-  height: 1.25rem;
-}
+  height: 1.25rem;}
 
-.cssbuttons-io-button:hover {
-  box-shadow: 0 0.5em 1.5em -0.5em rgb(149, 91, 255);
-}
+.cssbuttons-io-button:hover {box-shadow: 0 0.5em 1.5em -0.5em rgb(149, 91, 255);}
+.cssbuttons-io-button:active {box-shadow: 0 0.3em 1em -0.5em rgb(160, 109, 255);}
 
-.cssbuttons-io-button:active {
-  box-shadow: 0 0.3em 1em -0.5em rgb(160, 109, 255);
-}
-
-input[type="file"] {
-  display: none;
-}
+input[type="file"] {display: none;}
 
 svg {
   margin-right: 8px;
   width: 5.5rem;
-  height: 6rem;
-}
+  height: 6rem;}
 
 .border-box {
   border: 3px solid #000000;
   padding: 10px;
-  display: inline-block;
-}
+  display: inline-block;}
 
 .border-box:hover {
-  border: 3px solid #845ec2; 
-}
+  border: 3px solid #845ec2;}
 
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-}
+  align-items: center;}
 
-.label-and-button-container {
-  text-align: center;
-}
+.label-and-button-container {text-align: center;}
 
 

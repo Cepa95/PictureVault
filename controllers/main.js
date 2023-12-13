@@ -57,9 +57,11 @@ exports.downloadGallery = (req, res) => {
   archive.finalize();
 };
 
+
 exports.renderMainIndex = (req, res) => {
   res.render("main/index", { pageTitle: "index", path: "/" });
 };
+
 
 exports.displayGallery = (req, res) => {
   const uploadDirectory = path.join(__dirname, "../public/uploads");
@@ -82,6 +84,7 @@ exports.displayGallery = (req, res) => {
     });
   });
 };
+
 
 exports.displayHomePage = (req, res) => {
   const gifPath = '/animations/ring.gif';

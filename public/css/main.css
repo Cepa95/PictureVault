@@ -1,49 +1,41 @@
 html,
 body {
-  background: #E8E8E8;
-}
-
+  background: #E8E8E8;}
+  
 .custom-carousel {
   max-width: 600px;
   margin: 0 auto;
-  background: #E8E8E8;
-}
+  background: #E8E8E8;}
 
 .color-class {
   background: #E8E8E8;
   font-family: Didot, serif;
-  font-size: x-large;
-}
-
+  font-size: x-large;}
+  
 img {
   max-height: 320px;
-  max-width: 240px;
-}
+  max-width: 240px;}
 
 h1, h2 {
   font-family: Didot, serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: bold; 
-}
+  font-weight: bold;}
 
 .image-counter {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center;}
 
 .gif-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-}
+  align-items: center;}
 
 span {
   font-family: Didot, serif;
-  font-size: larger;
-}
+  font-size: larger;}
 
 
 

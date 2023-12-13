@@ -1,7 +1,5 @@
 
-.menu-outer:hover ~ .menu-close {
-    margin-right:-100px;
-  }
+.menu-outer:hover ~ .menu-close {margin-right:-100px;}
   .menu-outer > nav ul { top:15%; }
   
   .menu-outer {
@@ -29,8 +27,8 @@
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
+    transform: rotate(-45deg);}
+
   .menu-outer:hover {
     background: #845EC2;
     left: 0;
@@ -39,8 +37,8 @@
     -moz-transform: rotate(0deg);
     -ms-transform: rotate(0deg);
     -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
+    transform: rotate(0deg);}
+
   .menu-icon {
     z-index: 999;
     position: absolute;
@@ -57,8 +55,8 @@
     -moz-transition: all ease .5s;
     -ms-transition: all ease .5s;
     -o-transition: all ease .5s;
-    transition: all ease .5s;
-  }
+    transition: all ease .5s; }
+
   .menu-icon .bar {
     background: rgba(250,250,250,1);
     width: 100%;
@@ -68,11 +66,10 @@
     -moz-transition: all ease .5s;
     -ms-transition: all ease .5s;
     -o-transition: all ease .5s;
-    transition: all ease .5s;
-  }
-  .menu-outer:hover > .menu-icon {
-    opacity: 0;
-  }
+    transition: all ease .5s; }
+
+  .menu-outer:hover > .menu-icon { opacity: 0; }
+
   nav ul {
     position:absolute;
     width:100%;
@@ -82,16 +79,15 @@
     -moz-transition: all ease .5s;
     -ms-transition: all ease .5s;
     -o-transition: all ease .5s;
-    transition: all ease .5s;
-  }
-  .menu-outer:hover > nav ul {
-    left: 0;
-  }
+    transition: all ease .5s; }
+
+  .menu-outer:hover > nav ul { left: 0;}
+
   nav li {
     list-style:none;
     text-align: center;
-    text-transform: uppercase;
-  }
+    text-transform: uppercase; }
+
   nav li a {
     font-size: 2em;
     color: rgba(255,255,255,.8);
@@ -103,22 +99,19 @@
     -moz-transition: all ease .5s;
     -ms-transition: all ease .5s;
     -o-transition: all ease .5s;
-    transition: all ease .5s;
-  }
+    transition: all ease .5s; }
 
   nav li a:hover, nav li a.active:hover{
     color: rgba(250,130,70,1);
-    text-decoration: none;
-  }
+    text-decoration: none; }
+
   nav li a.active {
     color: rgb(0, 0, 0);
-    text-decoration: none;
-  }
+    text-decoration: none;}
 
   @media screen and (max-width: 600px), screen and (max-height: 600px) {
     nav ul {font-size:.75em;}
-    nav ul a {padding: 10px;}
-  }
+    nav ul a {padding: 10px;}}
 
   .menu-close {
     z-index: 9999;
@@ -143,16 +136,16 @@
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
+    transform: rotate(45deg); }
+
   .menu-close .menu-icon {
     right: 15px; left: auto;top: 68px;
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
+    transform: rotate(-45deg); }
+
   .menu-close .bar {
     background: rgba(250,250,250,1);
     width: 100%;
@@ -162,19 +155,18 @@
     -moz-transform-origin: center;
     -ms-transform-origin: center;
     -o-transform-origin: center;
-    transform-origin: center;
-  }
+    transform-origin: center;}
+
   .menu-close .bar:first-child {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
+    transform: rotate(45deg);}
+
   .menu-close .bar:last-child {
     -webkit-transform: rotate(-45deg);
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-  }
+    transform: rotate(-45deg); }
