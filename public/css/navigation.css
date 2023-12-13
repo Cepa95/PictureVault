@@ -2,7 +2,6 @@
 .menu-outer:hover ~ .menu-close {
     margin-right:-100px;
   }
-  .menu-outer:hover .bar { background:rgba(100,200,240,.9); }
   .menu-outer > nav ul { top:15%; }
   
   .menu-outer {
@@ -107,16 +106,12 @@
     transition: all ease .5s;
   }
 
-  nav li a:hover {
+  nav li a:hover, nav li a.active:hover{
     color: rgba(250,130,70,1);
     text-decoration: none;
   }
   nav li a.active {
     color: rgb(0, 0, 0);
-    text-decoration: none;
-  }
-  nav li a.active:hover {
-    color: rgba(250,130,70,1);;
     text-decoration: none;
   }
 
