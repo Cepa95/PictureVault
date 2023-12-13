@@ -14,5 +14,7 @@ router.get('/gallery', mainController.displayGallery);
 
 router.get('/home', mainController.displayHomePage);
 
+router.get("/download-gallery", mainController.downloadGallery);
+
 
 module.exports = router;

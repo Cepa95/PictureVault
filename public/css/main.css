@@ -1,16 +1,16 @@
 html,
 body {
-  background: #fdfff5;
+  background: #E8E8E8;
 }
 
 .custom-carousel {
   max-width: 600px;
   margin: 0 auto;
-  background: #fdfff5;
+  background: #E8E8E8;
 }
 
 .color-class {
-  background: #fdfff5;
+  background: #E8E8E8;
   font-family: Didot, serif;
   font-size: x-large;
 }
@@ -41,7 +41,7 @@ h1, h2 {
 }
 
 span {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Didot, serif;
   font-size: larger;
 }
 
