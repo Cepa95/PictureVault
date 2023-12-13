@@ -144,8 +144,8 @@
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     -o-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
-
+    transform: rotate(-45deg);
+  }
   .menu-close .bar {
     background: rgba(250,250,250,1);
     width: 100%;
@@ -156,17 +156,3 @@
     -ms-transform-origin: center;
     -o-transform-origin: center;
     transform-origin: center;}
-
-  .menu-close .bar:first-child {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);}
-
-  .menu-close .bar:last-child {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg); }
