@@ -11,15 +11,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const mainRoutes = require('./routes/main');
 const errorController = require("./controllers/error");
-const adminRoutes = require("./routes/admin");
 
 
 app.use('/', mainRoutes);
-app.use(adminRoutes)
 
 
 app.use(errorController.get404);
-
 
 // Start the server
 const port = process.env.PORT || 3000;

@@ -1,17 +1,17 @@
 html,
 body {
-  background: #ebd7d2;
+  background: #fdfff5;
 }
 
 .custom-carousel {
   max-width: 600px;
   margin: 0 auto;
-  background: #ebd7d2;
+  background: #fdfff5;
 }
 
 .color-class {
-  background: #ebd7d2;
-  font-family: "Great Vibes", cursive;
+  background: #fdfff5;
+  font-family: Didot, serif;
   font-size: x-large;
 }
 
@@ -21,7 +21,7 @@ img {
 }
 
 h1, h2 {
-  font-family: "Great Vibes", cursive;
+  font-family: Didot, serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,7 +41,7 @@ h1, h2 {
 }
 
 span {
-  font-family: "Great Vibes", cursive;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: larger;
 }
 
