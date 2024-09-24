@@ -162,3 +162,17 @@ dist
 
 # SvelteKit build / generate output
 .svelte-kit
+
+# Config files
+config.js
+config/*.js
+config/*.json
+
+# Firebase config
+firebase.json
+.firebaserc
+
+# Ignore .history directory
+.history/
+
+

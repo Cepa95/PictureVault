@@ -1,90 +1,98 @@
 const path = require("path");
-const fs = require("fs");
-const archiver = require("archiver");
-
 const upload = require("../models/upload");
+const bucket = require("../config/firebase-config");
+const axios = require('axios');
+const archiver = require('archiver');
+const stream = require('stream');
 
-
-// Define a route for uploading pictures (move this logic to the controller)
 exports.uploadImage = (req, res, next) => {
-  // Use the upload middleware to handle file upload
   upload.single("image")(req, res, function (err) {
     if (err) {
-      // Handle any errors, e.g., file upload failed
       return res.status(500).send("Error uploading the image");
     }
 
-    // After successful image upload, use res.redirect without the second argument
-    res.redirect("/gallery?success=true");
-  });
-};
-
-exports.downloadGallery = (req, res) => {
-  const uploadDirectory = path.join(__dirname, "../public/uploads");
-  const zipFileName = "gallery.zip";
-  const zipFilePath = path.join(__dirname, "../public", zipFileName);
-
-  // Create a zip file
-  const archive = archiver("zip", {
-    zlib: { level: 9 }, // Set compression level
-  });
-
-  const output = fs.createWriteStream(zipFilePath);
-
-  output.on("close", () => {
-    // Send the zip file as a response
-    res.sendFile(zipFilePath, (err) => {
-      // Cleanup: Delete the generated zip file after sending
-      fs.unlink(zipFilePath, (err) => {
-        if (err) {
-          console.error("Error deleting zip file:", err);
+    const blob = bucket.file(Date.now().toString() + path.extname(req.file.originalname));
+    const blobStream = blob.createWriteStream({
+      metadata: {
+        contentType: req.file.mimetype,
+        metadata: {
+          firebaseStorageDownloadTokens: Date.now().toString()
         }
+      }
+    });
+
+    blobStream.on('error', (err) => {
+      return res.status(500).send("Error uploading the image");
+    });
+
+    blobStream.on('finish', () => {
+      // Make the file public
+      blob.makePublic().then(() => {
+        res.redirect("/gallery?success=true");
+      }).catch((err) => {
+        console.error(err);
+        res.status(500).send("Error making the image public");
       });
     });
+
+    blobStream.end(req.file.buffer);
   });
-
-  archive.on("error", (err) => {
-    res.status(500).send("Error creating zip file");
-  });
-
-  // Pipe the archive to the output stream
-  archive.pipe(output);
-
-  // Add all files from the upload directory to the zip file
-  archive.directory(uploadDirectory, false);
-
-  // Finalize the archive
-  archive.finalize();
 };
 
+exports.downloadGallery = async (req, res) => {
+  try {
+    const [files] = await bucket.getFiles();
+    const fileUrls = files.map(file => `https://storage.googleapis.com/${bucket.name}/${file.name}`);
+
+    const archive = archiver('zip', {
+      zlib: { level: 9 } 
+    });
+
+    res.attachment('gallery.zip');
+
+    archive.pipe(res);
+
+    for (const url of fileUrls) {
+      const response = await axios({
+        url,
+        responseType: 'stream'
+      });
+
+      const fileName = url.split('/').pop();
+      archive.append(response.data, { name: fileName });
+    }
+
+    archive.finalize();
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Error downloading the gallery');
+  }
+};
 
 exports.renderMainIndex = (req, res) => {
   res.render("main/index", { pageTitle: "index", path: "/" });
 };
 
-
 exports.displayGallery = (req, res) => {
-  const uploadDirectory = path.join(__dirname, "../public/uploads");
-  fs.readdir(uploadDirectory, (err, files) => {
+  bucket.getFiles((err, files) => {
     if (err) {
       console.error(err);
       return res.status(500).send("Error reading uploaded images");
     }
 
-    const successMessage =
-      req.query.success === "true" ? "Image uploaded successfully" : "";
+    const fileUrls = files.map(file => `https://storage.googleapis.com/${bucket.name}/${file.name}`);
+    const successMessage = req.query.success === "true" ? "Image uploaded successfully" : "";
 
     res.render("main/gallery", {
-      images: files,
+      images: fileUrls,
       successMessage,
       currentPage: 1,
-      totalImages: files.length, // Total number of images
+      totalImages: fileUrls.length, 
       pageTitle: "Gallery",
       path: "/gallery",
     });
   });
 };
-
 
 exports.displayHomePage = (req, res) => {
   const gifPath = '/animations/ring.gif';

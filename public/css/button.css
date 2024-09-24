@@ -49,3 +49,18 @@ form {
 .label-and-button-container {text-align: center;}
 
 
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: transparent;
+  background-size: 180%, 180%;
+  background-repeat: no-repeat;
+}
+
+.carousel-control-prev-icon {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 8 8"><path d="M5.5 0L4.78.72 1.5 4l3.28 3.28.72-.72L3.22 4l2.28-2.28z"/></svg>');
+}
+
+.carousel-control-next-icon {
+  background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 8 8"><path d="M2.5 0L1.78.72 5.06 4 1.78 7.28l.72.72L6.5 4 2.5 0z"/></svg>'); 
+}

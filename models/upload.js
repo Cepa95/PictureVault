@@ -1,17 +1,26 @@
-const multer = require("multer");
-const path = require("path");
+const multer = require('multer');
+const path = require('path');
 
-// Set up multer for file uploads
-const storage = multer.diskStorage({
-  destination: "./public/uploads/",
-  filename: function (req, file, cb) {
-    cb(
-      null,
-      file.fieldname + "-" + Date.now() + path.extname(file.originalname)
-    );
-  },
+const multerStorage = multer.memoryStorage();
+
+const upload = multer({
+  storage: multerStorage,
+  limits: { fileSize: 8000000 },
+  fileFilter: function (req, file, cb) {
+    checkFileType(file, cb);
+  }
 });
 
-const upload = multer({ storage });
+function checkFileType(file, cb) {
+  const filetypes = /jpeg|jpg|png|gif/;
+  const extname = filetypes.test(path.extname(file.originalname).toLowerCase());
+  const mimetype = filetypes.test(file.mimetype);
+
+  if (mimetype && extname) {
+    return cb(null, true);
+  } else {
+    cb('Error: Images Only!');
+  }
+}
 
 module.exports = upload;
