@@ -12,7 +12,7 @@
     left: 100%;
     margin-left: -100px;
     height: 200%;
-    background: #845EC2;  
+    background: #1d813e;  
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
     -ms-transition: all ease .5s;
@@ -30,7 +30,7 @@
     transform: rotate(-45deg);}
 
   .menu-outer:hover {
-    background: #845EC2;
+    background: #28a745;
     left: 0;
     margin-left: 0;
     -webkit-transform: rotate(0deg);
@@ -58,7 +58,7 @@
     transition: all ease .5s; }
 
   .menu-icon .bar {
-    background: rgba(250,250,250,1);
+    background: gold;
     width: 100%;
     height: 5px;
     margin: 0 0 5px;
@@ -102,7 +102,7 @@
     transition: all ease .5s; }
 
   nav li a:hover, nav li a.active:hover{
-    color: rgba(250,130,70,1);
+    color: gold;
     text-decoration: none; }
 
   nav li a.active {
@@ -120,7 +120,7 @@
     right: 100%;
     width: 200px;
     height: 200px;
-    background: rgba(250,130,70,1);
+    background: gold;
     cursor: pointer;
     -webkit-transition: all ease .5s;
     -moz-transition: all ease .5s;
@@ -147,7 +147,7 @@
     transform: rotate(-45deg);
   }
   .menu-close .bar {
-    background: rgba(250,250,250,1);
+    background: #1d813e;
     width: 100%;
     height: 5px;
     position:absolute;

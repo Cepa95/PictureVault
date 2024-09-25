@@ -7,48 +7,61 @@
   font-size: 17px;
   padding: 0.8em 1.5em 0.8em 1.2em;
   color: white;
-  background: #845ec2;
+  background: #1d813e; 
   background: linear-gradient(
     0deg,
-    rgb(120, 47, 255) 0%,
-    rgb(185, 132, 255) 100%
+    rgb(40, 167, 69) 0%, 
+    rgb(72, 201, 176) 100% 
   );
   border: none;
-  box-shadow: 0 0.7em 1.5em -0.5em #845ec2;
+  box-shadow: 0 0.7em 1.5em -0.5em #28a745; 
   letter-spacing: 0.05em;
-  border-radius: 20em;}
+  border-radius: 20em;
+}
 
 .cssbuttons-io-button svg {
   margin-right: 8px;
   width: 1.25rem;
-  height: 1.25rem;}
+  height: 1.25rem;
+}
 
-.cssbuttons-io-button:hover {box-shadow: 0 0.5em 1.5em -0.5em rgb(149, 91, 255);}
-.cssbuttons-io-button:active {box-shadow: 0 0.3em 1em -0.5em rgb(160, 109, 255);}
+.cssbuttons-io-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em rgb(72, 201, 176);
+}
 
-input[type="file"] {display: none;}
+.cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em rgb(60, 179, 113); 
+}
+
+input[type="file"] {
+  display: none;
+}
 
 svg {
   margin-right: 8px;
   width: 5.5rem;
-  height: 6rem;}
+  height: 6rem;
+}
 
 .border-box {
   border: 3px solid #000000;
   padding: 10px;
-  display: inline-block;}
+  display: inline-block;
+}
 
 .border-box:hover {
-  border: 3px solid #845ec2;}
+  border: 3px solid #28a745;
+}
 
 form {
   display: flex;
   flex-direction: column;
-  align-items: center;}
+  align-items: center;
+}
 
-.label-and-button-container {text-align: center;}
-
-
+.label-and-button-container {
+  text-align: center;
+}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -63,4 +76,16 @@ form {
 
 .carousel-control-next-icon {
   background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23000" viewBox="0 0 8 8"><path d="M2.5 0L1.78.72 5.06 4 1.78 7.28l.72.72L6.5 4 2.5 0z"/></svg>'); 
+}
+
+.green-text {
+  color: #1d813e;
+}
+
+.rounded-btn {
+  border-radius: 40px;
+}
+
+.large-text {
+  font-size: 1.2rem; 
 }

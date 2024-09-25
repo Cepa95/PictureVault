@@ -1,14 +1,14 @@
 html,
 body {
-  background: #E8E8E8;}
+  background: gold;}
   
 .custom-carousel {
   max-width: 600px;
   margin: 0 auto;
-  background: #E8E8E8;}
+  background: gold;}
 
 .color-class {
-  background: #E8E8E8;
+  background: gold;
   font-family: Didot, serif;
   font-size: x-large;}
   
@@ -37,5 +37,6 @@ span {
   font-family: Didot, serif;
   font-size: larger;}
 
-
-
+.green-text {
+    color: #1d813e;
+  }

@@ -81,7 +81,7 @@ exports.displayGallery = (req, res) => {
     }
 
     const fileUrls = files.map(file => `https://storage.googleapis.com/${bucket.name}/${file.name}`);
-    const successMessage = req.query.success === "true" ? "Image uploaded successfully" : "";
+    const successMessage = req.query.success === "true" ? "Slika je uspješno učitana" : "";
 
     res.render("main/gallery", {
       images: fileUrls,
